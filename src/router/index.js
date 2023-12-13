@@ -8,6 +8,8 @@ import Fabu from '../views/Fabu.vue'
 import More from '../views/More.vue'
 import Gonggao from '../views/Gonggao.vue'
 import Guanli from '../views/Guanli.vue'
+import Myfabu from  '../views/Myfabu.vue'
+import Inform from  '../views/Inform.vue'
 const routes = [
   {
     path: '',
@@ -44,13 +46,24 @@ const routes = [
         component:Guanli
       },
       {
-        path:'/user',
+        path:'/cart',
         name:'6',
         component:Geren
         
-      },{
-        path:'/more',
+      },
+      {
+        path:'/myfabu',
         name:'7',
+        component:Myfabu
+      },
+      {
+        path:'/inform',
+        name:'8',
+        component: Inform
+      },
+      {
+        path:'/more',
+        name:'9',
         component:More
       }
     ]

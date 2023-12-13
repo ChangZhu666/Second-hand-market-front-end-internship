@@ -2,7 +2,7 @@
 import {ref} from 'vue'
 import  Breadcrumb  from '../components/breadcrumb.vue';
 import { useCounterStore } from '@/store/counter'
-
+import { ElMessage, ElMessageBox } from 'element-plus'
 const store = useCounterStore()
 const res = ref([])
 
@@ -26,10 +26,33 @@ const onCurrentChange = (page) =>{
 res.value = getList();
 
 
-const handleClick= (id)=>{
-    store.deldata(id)
-    res.value = getList();
-}
+const handleClick= (id,name)=>{
+    ElMessageBox.confirm(
+    '这个操作将会删除此商品，确认吗',
+    '删除商品',
+    {
+      confirmButtonText: '确认',
+      cancelButtonText: '取消',
+      type: 'info',
+    }
+  )
+    .then(() => {
+      ElMessage({
+        type: 'success',
+        message: '删除成功',
+      })
+        store.deldata(id)
+        res.value = getList();
+        store.delfabu(name)
+    })
+    .catch(() => {
+      ElMessage({
+        type: 'info',
+        message: '删除取消',
+      })
+    })
+}  
+
 </script>
 
 <template>
@@ -49,7 +72,7 @@ const handleClick= (id)=>{
             <el-table-column prop="Introduction" label="介绍" width="650" />
             <el-table-column fixed="right" label="操作" width="150">
             <template #default="{ row }">
-                <el-button  link size="large" round @click="handleClick(row.id)" type="primary" >删除</el-button>
+                <el-button  link size="large" round @click="handleClick(row.id,row.name)" type="primary" >删除</el-button>
             </template>
         </el-table-column>
   </el-table>
@@ -73,7 +96,7 @@ const handleClick= (id)=>{
 <style scoped>
 .main{
     height: 1080px;
-    width: 1800px;
+    width: 100%;
 
 }
 .container{

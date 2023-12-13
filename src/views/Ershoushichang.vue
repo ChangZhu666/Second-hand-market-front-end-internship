@@ -24,6 +24,12 @@ const onCurrentChange = (page) =>{
   return slicedData;
 };
 res.value = getList();
+
+const handleClick = (id)=>{
+    store.buy(id)
+    store.deldata(id)
+    res.value = getList();
+}
 </script>
 
 <template>
@@ -42,8 +48,8 @@ res.value = getList();
             <el-table-column prop="number" label="数量" width="100" />
             <el-table-column prop="Introduction" label="介绍" width="650" />
             <el-table-column fixed="right" label="操作" width="150">
-            <template #default>
-                <el-button  link size="large" round @click="handleClick" type="primary" >购买</el-button>
+            <template #default="{ row }">
+                <el-button  link size="large" round @click="handleClick(row.id)" type="primary" >购买</el-button>
             </template>
         </el-table-column>
   </el-table>

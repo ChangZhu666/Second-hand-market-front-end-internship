@@ -66,6 +66,7 @@ const submitForm = () => {
       // 检查数据是否成功添加
       const Added = store.data.length > oldlength ;
 
+      store.addfabu(ruleForm)
       if (Added) {
       // 如果数据成功添加，显示成功消息
       ElMessage({type: 'success', message: '成功发布商品', });

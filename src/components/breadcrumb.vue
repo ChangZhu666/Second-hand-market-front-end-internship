@@ -13,8 +13,12 @@ const getBreadcrumbText = (routeName) => {
     case '5':
         return '二手管理';
     case '6':
-        return '个人中心';
+        return '个人中心-购物车';
     case '7':
+        return '个人中心-我的发布';
+    case '8':
+        return '个人中心-个人信息';
+    case '9':
         return '更多';
     default:
         return '';

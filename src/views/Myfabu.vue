@@ -9,7 +9,7 @@ const store = useCounterStore();
 <template>
     <Breadcrumb></Breadcrumb>
     <div class="main" style="display: table; clear: both;">
-    <el-col v-for="data in store.purchase" :key="data.id" >
+    <el-col v-for="data in store.myfabu" :key="data.id" >
       <el-card :body-style="{ padding: '0px' }" style="float:left; margin:35px 35px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); width:500px; height:300px">
         <img :src="data.image" class="image" style="width:auto; height:200px" />
         <div style="padding: 14px">
@@ -28,7 +28,7 @@ const store = useCounterStore();
 .main{
     height: auto;
     width: 100%;
-    background-color: rgb(255, 0, 98);
+    background-color: rgb(63, 56, 59);
 }
 
 </style>
