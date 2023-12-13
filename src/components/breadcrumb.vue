@@ -9,10 +9,12 @@ const getBreadcrumbText = (routeName) => {
     case '3':
         return '二手市场';
     case '4':
-        return  '二手发布';
+        return '二手发布';
     case '5':
-        return '个人中心';
+        return '二手管理';
     case '6':
+        return '个人中心';
+    case '7':
         return '更多';
     default:
         return '';

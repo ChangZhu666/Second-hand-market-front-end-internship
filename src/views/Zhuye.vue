@@ -49,9 +49,13 @@ const changeTab = (index) => {
         </el-menu-item>
         <el-menu-item index="5">
           <el-icon><setting /></el-icon>
-          <span>个人中心</span>
+          <span>二手管理</span>
         </el-menu-item>
         <el-menu-item index="6">
+          <el-icon><setting /></el-icon>
+          <span>个人中心</span>
+        </el-menu-item>
+        <el-menu-item index="7">
           <el-icon><setting /></el-icon>
           <span>更多</span>
         </el-menu-item>

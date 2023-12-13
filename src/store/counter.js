@@ -17,15 +17,36 @@
         const purchase = [
           {name:'罗技鼠标G705',price:99,number:1,image:require('@/assets/img/g705-gallery-1.webp'),id:1,Introduction:'来自 Aurora 系列的 G705 无线游戏鼠标的曲线造型可提高舒适度和控制力，专为较小的手掌而设计'},
         ]
-        return {data,purchase}
+
+        const adddata = (newdata) => {
+          data.unshift({
+            id: 1,
+            ...(newdata.value || newdata),
+          });
+        
+          // 重新给 ID 赋值
+          data.forEach((item, index) => {
+            item.id = index + 1;
+          });
+        
+          console.log(data);
+        };
+        
+        const deldata = (id)=>{
+          const indexToDelete = data.findIndex((item) => item.id === id);
+
+          if (indexToDelete !== -1) {
+           data.splice(indexToDelete, 1);
+
+          // 重新给 ID 赋值
+          data.forEach((item, index) => {
+          item.id = index + 1;
+          });
+          }
+        };
 
 
-
-
-
-
-
-
+        return {data,purchase,adddata,deldata}
         })
 
 

@@ -7,6 +7,7 @@ import Geren from '../views/Geren.vue'
 import Fabu from '../views/Fabu.vue'
 import More from '../views/More.vue'
 import Gonggao from '../views/Gonggao.vue'
+import Guanli from '../views/Guanli.vue'
 const routes = [
   {
     path: '',
@@ -38,13 +39,18 @@ const routes = [
         component:Fabu
         
       },{
-        path:'/user',
+        path:'/manage',
         name:'5',
+        component:Guanli
+      },
+      {
+        path:'/user',
+        name:'6',
         component:Geren
         
       },{
         path:'/more',
-        name:'6',
+        name:'7',
         component:More
       }
     ]
