@@ -165,11 +165,12 @@ const beforeUpload = (file) => {
 
 <style scoped>
 .main{
-    height: 1080px;
+  position: fixed;
+    height: 100%;
     width: 1800px;  
 }
 .container{
-    margin: 30px auto;
+    margin: 70px auto;
     height: 100%;
     width: 30%;
 }

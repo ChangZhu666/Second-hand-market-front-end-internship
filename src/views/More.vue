@@ -10,6 +10,7 @@ import  Breadcrumb  from '../components/breadcrumb.vue';
 
 <style scoped>
 .main{
+
     height: 1080px;
     width: 1800px;
     background-color: rgb(145, 255, 0);

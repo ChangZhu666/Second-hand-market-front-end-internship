@@ -41,3 +41,6 @@ input {
 .el-form-item--large .el-form-item__content {
     line-height: 20px;
 }
+.el-table--fit el-table--striped el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-none{
+    margin-top: 50px;
+}

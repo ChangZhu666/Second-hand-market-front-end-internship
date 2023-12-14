@@ -1,6 +1,6 @@
 <script setup>
 import {ref} from 'vue'
-import  Breadcrumb  from '../components/breadcrumb.vue';
+import  Breadcrumb  from '../components/breadcrumb copy.vue';
 import { useCounterStore } from '@/store/counter'
 
 const store = useCounterStore()
@@ -46,7 +46,7 @@ const handleClick = (id)=>{
             <el-table-column prop="name" label="名称" width="200" />
             <el-table-column prop="price" label="价格" width="100" />
             <el-table-column prop="number" label="数量" width="100" />
-            <el-table-column prop="Introduction" label="介绍" width="650" />
+            <el-table-column prop="Introduction" label="介绍" width="750" />
             <el-table-column fixed="right" label="操作" width="150">
             <template #default="{ row }">
                 <el-button  link size="large" round @click="handleClick(row.id)" type="primary" >购买</el-button>
@@ -72,9 +72,9 @@ const handleClick = (id)=>{
 
 <style scoped>
 .main{
+    position: fixed;
     height: 1080px;
     width: 1800px;
-
 }
 .container{
     height: 80%;

@@ -26,6 +26,7 @@ const store = useCounterStore();
 
 <style scoped>
 .main{
+  margin-top:50px ;
     height: auto;
     width: 100%;
     background-color: rgb(255, 0, 98);

@@ -42,7 +42,6 @@ const getBreadcrumbText = (routeName) => {
 
 <style scoped>
 .breadcrumb{
-    position: fixed;
     padding-top: 19px;
     padding-left: 25px;
     height: 38px;

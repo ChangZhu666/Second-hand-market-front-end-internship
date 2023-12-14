@@ -14,7 +14,6 @@ import {
   More,
 } from '@element-plus/icons-vue'
 
-
 const activeTabName = ref('');
 
 
@@ -85,6 +84,7 @@ const changeTab = (index) => {
 
 <style scoped>
 .el-menu {
+
   height: 1080px; /* 设置菜单容器高度为视口高度 */
   width:150px;
   position: fixed;
