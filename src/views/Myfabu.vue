@@ -1,5 +1,6 @@
 <script  setup>
 import  Breadcrumb  from '../components/breadcrumb.vue';
+import touxiang from '../components/youshangjiao.vue'
 import { useCounterStore } from '@/store/counter';
 
 const store = useCounterStore();
@@ -7,6 +8,7 @@ const store = useCounterStore();
 </script>
 
 <template>
+  <touxiang></touxiang>
     <Breadcrumb></Breadcrumb>
     <div class="main" style="display: table; clear: both;">
     <el-col v-for="data in store.myfabu" :key="data.id" >

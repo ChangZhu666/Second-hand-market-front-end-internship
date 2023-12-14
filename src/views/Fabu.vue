@@ -1,5 +1,6 @@
 <script  setup>
 import  Breadcrumb  from '../components/breadcrumb.vue';
+import touxiang from '../components/youshangjiao.vue'
 import { ElMessage } from 'element-plus'
 import { ref } from 'vue'
 import axios from 'axios';
@@ -122,6 +123,7 @@ const beforeUpload = (file) => {
 </script>
 
 <template>
+  <touxiang></touxiang>
     <div class="main">
       <Breadcrumb></Breadcrumb>
         <div class="container">

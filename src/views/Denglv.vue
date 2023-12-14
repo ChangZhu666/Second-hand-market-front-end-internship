@@ -1,16 +1,40 @@
 <script setup>
+import { useCounterStore } from '@/store/counter';
+import { ElMessage } from 'element-plus'
+import router from '@/router';
+const store = useCounterStore();
 
+const temp ={
+  username:'',
+  password:''
+}
+
+const login = () => {
+    const { username, password } = temp;
+
+    if (username === store.info.username && password === store.info.password) {
+      ElMessage({ message: '登录成功！', type: 'success', })
+      setTimeout(() => {
+      router.push('/home');
+    }, 1200);
+    } else {
+    // 登录失败的逻辑
+    ElMessage.error('账号密码错误，请重新输入')
+    // 可以显示错误信息或执行其他失败操作
+    }
+
+}
 </script>
 <template>
   <div class="home">
     <div class="main">
       <h3 class="title">Login</h3>
         <form>
-          <input type="text" id="username" name="username" required placeholder="Username" title="请输入用户名" maxlength="14">
+          <input type="text" id="username" name="username" required placeholder="Username" title="请输入用户名" maxlength="14" v-model="temp.username">
 
-          <input type="password" id="password" name="password" required placeholder="Password" title="请输入密码" maxlength="18">
+          <input type="password" id="password" name="password" required placeholder="Password" title="请输入密码" maxlength="18" v-model="temp.password">
 
-          <button type="submit" @click="$router.push('/home')">Loign</button>
+          <button type="button"  @click="login()">Loign</button>
         </form> 
     </div>
   </div>

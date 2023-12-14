@@ -44,3 +44,36 @@ input {
 .el-table--fit el-table--striped el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-none{
     margin-top: 50px;
 }
+
+.el-carousel__arrow--right {
+    right: 45px;
+}
+.el-carousel__item {
+    height: 107%;
+}
+.el-carousel__arrow {
+    height: 75px;
+    width: 75px;
+    background-color: rgb(31 45 61 / 33%);
+}
+.el-carousel__container {
+    height: 810px;
+}
+.el-carousel__indicators--horizontal {
+    bottom: 20px;
+}
+.el-carousel__button {
+    width: 75px;
+    height: 8px;
+    border-radius: 4px;
+}
+.el-popper.is-customized {
+    /* Set padding to ensure the height is 32px */
+    padding: 6px 12px;
+    background: linear-gradient(90deg, rgb(159, 229, 151), rgb(204, 229, 129));
+  }
+  
+  .el-popper.is-customized .el-popper__arrow::before {
+    background: linear-gradient(45deg, #b2e68d, #bce689);
+    right: 0;
+  }

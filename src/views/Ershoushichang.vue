@@ -1,6 +1,7 @@
 <script setup>
 import {ref} from 'vue'
 import  Breadcrumb  from '../components/breadcrumb copy.vue';
+import touxiang from '../components/youshangjiao.vue'
 import { useCounterStore } from '@/store/counter'
 
 const store = useCounterStore()
@@ -68,6 +69,7 @@ const handleClick = (id)=>{
         </div>
 
     </div>
+    <touxiang></touxiang>
 </template>
 
 <style scoped>

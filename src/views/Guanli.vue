@@ -1,6 +1,7 @@
 <script setup>
 import {ref} from 'vue'
 import  Breadcrumb  from '../components/breadcrumb copy.vue';
+import touxiang from '../components/youshangjiao.vue'
 import { useCounterStore } from '@/store/counter'
 import { ElMessage, ElMessageBox } from 'element-plus'
 const store = useCounterStore()
@@ -57,6 +58,7 @@ const handleClick= (id,name)=>{
 
 <template>
     <div class="main">
+      <touxiang></touxiang>
         <div class="container">
           <Breadcrumb></Breadcrumb>
         <el-table :data="res" style="width: 100%;display: flex; justify-content: center;" stripe >

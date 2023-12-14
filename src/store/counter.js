@@ -44,6 +44,10 @@
           {name:'组装键盘-达尔优A840',price:229,number:1,image:require('@/assets/img/fabu/jianpan.jpg'),id: 8,Introduction: '达尔优A840樱桃cherry轴PBT键帽A87机械键盘青轴电脑游戏电竞黑轴'},
           {name:'口笛',price:9,number:1,image:require('@/assets/img/fabu/kodi.jpg'),id: 9,Introduction: '将吹嘴含在口中,用噪子哼哼曲调,用声带的振动发出的声音带动口笛气鸣腔和笛膜腔的振动共鸣从而发出动听的音色'},
         ]
+
+        const info ={username:"2101080102",password:"031023",Telephone:"18100000000",Place:"Hunan Xiangtan",Address:"No. 1188, Yuhu District, Xiangtan City, Hunan Province, China"}
+          
+      
         const adddata = (newdata) => {
           data.unshift({
             id: 1,
@@ -103,7 +107,7 @@
             });
          }
 
-        return {data,purchase,myfabu,adddata,deldata,addfabu,delfabu,buy}
+        return {data,purchase,myfabu,info,adddata,deldata,addfabu,delfabu,buy}
         })
 
 

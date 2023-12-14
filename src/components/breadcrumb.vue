@@ -5,7 +5,7 @@ const route = useRoute()
 const getBreadcrumbText = (routeName) => {
   switch (routeName) {
     case '2':
-      return '广告';
+      return '公告';
     case '3':
         return '二手市场';
     case '4':
@@ -35,7 +35,7 @@ const getBreadcrumbText = (routeName) => {
             </el-breadcrumb>
             <div class="avatar">
 
-            </div>
+</div>
         </div>
         
 </template>

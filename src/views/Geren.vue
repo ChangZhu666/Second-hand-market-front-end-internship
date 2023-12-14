@@ -1,12 +1,13 @@
 <script  setup>
 import  Breadcrumb  from '../components/breadcrumb.vue';
 import { useCounterStore } from '@/store/counter';
-
+import touxiang from '../components/youshangjiao.vue'
 const store = useCounterStore();
 
 </script>
 
 <template>
+  <touxiang></touxiang>
     <Breadcrumb></Breadcrumb>
     <div class="main" style="display: table; clear: both;">
     <el-col v-for="data in store.purchase" :key="data.id" >
